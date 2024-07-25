@@ -1,8 +1,10 @@
 <?php
- 
-?>
-
-<?php
+add_action('init', 'start_session', 1);
+function start_session() {
+	if(!session_id()) {
+	session_start();
+	}
+}
  add_post_type_support('page','excerpt');
 /**
  * Astra functions and definitions
